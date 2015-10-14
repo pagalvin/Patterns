@@ -38,15 +38,10 @@
 
         // Notify all the observers
         public NotifyObservers() {
-
             for (let i = 0; i < this._observers.length; i++) {
-                this._observers[i].ReceiveNotification(
-                    {
-                        temperature: this._temp,
-                        humidity: this._humidity,
-                        pressure: this._pressure
-                    }
-                        );
+
+                // NOTE: this should pass the actual weather data to the client but this is a simplistic example.
+                this._observers[i].ReceiveNotification("I have some new weather data for you.");
             }
         }
 

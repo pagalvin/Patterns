@@ -24,5 +24,26 @@
 
     weatherSubject.NotifyObservers();
 
+    var scoreServer: bo.ScoreDataServer;
+    var scoreClient1: bo.ScoreDataClient;
+    var scoreClient2: bo.ScoreDataClient;
+    var scoreClient3: bo.ScoreDataClient;
+
+    scoreServer = new bo.ScoreDataServer(1, 15, 100, 23, 999, 56);
+    scoreClient1 = new bo.ScoreDataClient();
+    scoreClient2 = new bo.ScoreDataClient();
+    scoreClient3 = new bo.ScoreDataClient();
+
+    scoreServer.RegisterObserver(scoreClient1);
+    scoreServer.RegisterObserver(scoreClient2);
+    scoreServer.RegisterObserver(scoreClient3);
+
+    scoreServer.NotifyObservers();
+
+    scoreServer.RemoveObserver(scoreClient1);
+
+    scoreServer.NotifyObservers();
+
+
 
 }

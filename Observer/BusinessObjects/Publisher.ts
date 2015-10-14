@@ -6,7 +6,7 @@
         protected _observers: Patterns.Interfaces.IObserver[];
 
         constructor() {
-
+            this._observers = [];
         }
 
         // Once registered, the observer will be notified of any changes in state.
@@ -26,6 +26,7 @@
 
         // This is meant to be overriden by the sub-class
         public NotifyObservers() {
+            alert("You should have overriden me.");
         }
     }
 
