@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -28,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="BusinessObjects\AbstractPublisher.ts" />
     <TypeScriptCompile Include="BusinessObjects\Publisher.ts" />
     <TypeScriptCompile Include="BusinessObjects\ScoreDataClient.ts" />
     <TypeScriptCompile Include="BusinessObjects\ScoreDataServer.ts" />

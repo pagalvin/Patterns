@@ -14,9 +14,6 @@
         // This overrides the empty NotifyObservers() in the base class.
         public NotifyObservers() {
 
-            
-//            super.NotifyObservers();
-
             for (let i = 0; i < this._observers.length; i++) {
                 this._observers[i].ReceiveNotification(this._allScores);
             }
