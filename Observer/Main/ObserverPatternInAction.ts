@@ -44,6 +44,24 @@
 
     scoreServer.NotifyObservers();
 
+    var eventServer: bo.EventPublisher;
+    var eventClient1: bo.EventClient;
+    var eventClient2: bo.EventClient;
+    var eventClient3: bo.EventClient;
 
+    eventServer = new bo.EventPublisher();
+    eventClient1 = new bo.EventClient()
+    eventClient2 = new bo.EventClient()
+    eventClient3 = new bo.EventClient()
+
+    eventServer.RegisterObserver(eventClient1);
+    eventServer.RegisterObserver(eventClient2);
+    eventServer.RegisterObserver(eventClient3);
+
+    eventServer.NotifyObservers();
+
+    eventServer.RemoveObserver(eventClient1);
+
+    eventServer.NotifyObservers();
 
 }
